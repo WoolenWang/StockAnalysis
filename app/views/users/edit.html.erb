@@ -1,0 +1,20 @@
+Edit My Account
+<% if @user.errors.any? %>
+    <div id="error_explanation">
+	<h2><%= pluralize(@user.errors.count, "error") %> 条错误信息:</h2>
+	<ul>
+	    <% @user.errors.full_messages.each do |msg| %>
+		<li><%= msg %></li>
+	    <% end %>
+	</ul>
+    </div>
+<% end %>
+<%= form_for @user, :url => account_path do |f| %>
+
+    <%= render :partial => "form", locals: {f: f}  %>
+
+    <%= f.submit "Update" %>
+
+<% end %>
+
+<%= link_to "My Profile", account_path %>
