@@ -11,23 +11,23 @@ gem 'rails', '3.2.13'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+    gem 'sass-rails', '~> 3.2.3'
+    gem 'coffee-rails', '~> 3.2.1'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+    # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+    # gem 'therubyracer', :platforms => :ruby
 
-  gem 'uglifier', '>= 1.0.3'
+    gem 'uglifier', '>= 1.0.3'
 end
 # javascript脚本运行
 gem 'jquery-rails'
 gem 'execjs'
-gem 'therubyracer' 
+gem 'therubyracer'
 # 用户登陆
 gem 'authlogic'
 # 数据库
-gem 'mysql2','0.3.13'
-gem 'thin','1.5.1'
+gem 'mysql2', '0.3.13'
+gem 'thin', '1.5.1'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

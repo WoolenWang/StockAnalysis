@@ -1,11 +1,9 @@
-
-#new_user{
+#new_user {
     width: 100%;
     font-size: 16px; /* Primary font size of form. Contained elements' font size are all relative to this setting */
 }
 
-
-#new_user input, #new_user textarea{
+#new_user input, #new_user textarea {
     width: 98%;
     border-radius: 5px;
     border: 1px solid gray;
@@ -17,40 +15,39 @@
     box-sizing: border-box;
 }
 
-#new_user textarea{
-    resize:vertical; /* allow vertical resize of textarea */
+#new_user textarea {
+    resize: vertical; /* allow vertical resize of textarea */
     height: 200px;
 }
 
-
-#new_user input:focus, #new_user textarea:focus{
+#new_user input:focus, #new_user textarea:focus {
     box-shadow: 0 0 10px green inset;
 }
 
-
-#new_user input[type="radio"], #new_user input[type="checkbox"]{
+#new_user input[type="radio"], #new_user input[type="checkbox"] {
     padding: 0;
     width: auto;
     height: auto;
     border-radius: 0;
 }
 
-#new_user select{
+#new_user select {
     width: 80%;
     font-size: 1.5em;
     border: 2px solid #eee;
 }
 
-#new_user .formcolumn{ /* column div inside form */
+#new_user .formcolumn {
+    /* column div inside form */
     width: 49%;
     float: left;
 }
 
-#new_user .formcolumn:first-of-type{
+#new_user .formcolumn:first-of-type {
     margin-right: 2%; /* 2% margin after first column */
 }
 
-#new_user .formcolumn label, #new_user .formcolumn fieldset{
+#new_user .formcolumn label, #new_user .formcolumn fieldset {
     font: bold 0.8em Verdana; /* font size is 12.8px, or 16 x 0.8 */
     text-transform: uppercase;
     display: block;
@@ -58,36 +55,36 @@
     margin-bottom: 3px;
 }
 
-#new_user fieldset{
+#new_user fieldset {
     width: 98%;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-#new_user .formcolumn label:first-child, #new_user .formcolumn fieldset:first-child{
+#new_user .formcolumn label:first-child, #new_user .formcolumn fieldset:first-child {
     margin-top: 0; /* first label or fieldset within each column should not no top margin */
 }
 
-#new_user fieldset ul{
+#new_user fieldset ul {
     list-type: none;
     margin: 0;
     padding: 0;
 }
 
-#new_user fieldset ul li{
+#new_user fieldset ul li {
     display: inline-block;
     margin-bottom: 5px;
     margin-right: 1em;
 }
 
-#new_user div.buttons{
+#new_user div.buttons {
     clear: both;
     text-align: center;
 }
 
-#new_user input.button{
-    margin-top: 1.5EM;
+#new_user input.button {
+    margin-top: 1.5 EM;
     width: 50%;
     box-shadow: 0 0 10px gray;
     text-transform: uppercase;
@@ -98,49 +95,50 @@
     font-weight: bold;
     letter-spacing: 7px;
     text-shadow: 0 -2px 1px #8a8a8a;
-    background: rgb(169,3,41);
-    background: -moz-linear-gradient(top,  rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(169,3,41,1)), color-stop(44%,rgba(143,2,34,1)), color-stop(100%,rgba(109,0,25,1)));
-    background: -webkit-linear-gradient(top,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%);
-    background: -o-linear-gradient(top,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%);
-    background: -ms-linear-gradient(top,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%);
-    background: linear-gradient(to bottom,  rgba(169,3,41,1) 0%,rgba(143,2,34,1) 44%,rgba(109,0,25,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 );
+    background: rgb(169, 3, 41);
+    background: -moz-linear-gradient(top, rgba(169, 3, 41, 1) 0%, rgba(143, 2, 34, 1) 44%, rgba(109, 0, 25, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(169, 3, 41, 1)), color-stop(44%, rgba(143, 2, 34, 1)), color-stop(100%, rgba(109, 0, 25, 1)));
+    background: -webkit-linear-gradient(top, rgba(169, 3, 41, 1) 0%, rgba(143, 2, 34, 1) 44%, rgba(109, 0, 25, 1) 100%);
+    background: -o-linear-gradient(top, rgba(169, 3, 41, 1) 0%, rgba(143, 2, 34, 1) 44%, rgba(109, 0, 25, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(169, 3, 41, 1) 0%, rgba(143, 2, 34, 1) 44%, rgba(109, 0, 25, 1) 100%);
+    background: linear-gradient(to bottom, rgba(169, 3, 41, 1) 0%, rgba(143, 2, 34, 1) 44%, rgba(109, 0, 25, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a90329', endColorstr='#6d0019', GradientType=0);
 }
 
-#new_user input.button:active{
+#new_user input.button:active {
     text-shadow: 0 0 1px #8a8a8a;
-    background: rgb(109,0,25);
-    background: -moz-linear-gradient(top,  rgba(109,0,25,1) 0%, rgba(143,2,34,1) 56%, rgba(169,3,41,1) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(109,0,25,1)), color-stop(56%,rgba(143,2,34,1)), color-stop(100%,rgba(169,3,41,1)));
-    background: -webkit-linear-gradient(top,  rgba(109,0,25,1) 0%,rgba(143,2,34,1) 56%,rgba(169,3,41,1) 100%);
-    background: -o-linear-gradient(top,  rgba(109,0,25,1) 0%,rgba(143,2,34,1) 56%,rgba(169,3,41,1) 100%);
-    background: -ms-linear-gradient(top,  rgba(109,0,25,1) 0%,rgba(143,2,34,1) 56%,rgba(169,3,41,1) 100%);
-    background: linear-gradient(to bottom,  rgba(109,0,25,1) 0%,rgba(143,2,34,1) 56%,rgba(169,3,41,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d0019', endColorstr='#a90329',GradientType=0 );
+    background: rgb(109, 0, 25);
+    background: -moz-linear-gradient(top, rgba(109, 0, 25, 1) 0%, rgba(143, 2, 34, 1) 56%, rgba(169, 3, 41, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(109, 0, 25, 1)), color-stop(56%, rgba(143, 2, 34, 1)), color-stop(100%, rgba(169, 3, 41, 1)));
+    background: -webkit-linear-gradient(top, rgba(109, 0, 25, 1) 0%, rgba(143, 2, 34, 1) 56%, rgba(169, 3, 41, 1) 100%);
+    background: -o-linear-gradient(top, rgba(109, 0, 25, 1) 0%, rgba(143, 2, 34, 1) 56%, rgba(169, 3, 41, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(109, 0, 25, 1) 0%, rgba(143, 2, 34, 1) 56%, rgba(169, 3, 41, 1) 100%);
+    background: linear-gradient(to bottom, rgba(109, 0, 25, 1) 0%, rgba(143, 2, 34, 1) 56%, rgba(169, 3, 41, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6d0019', endColorstr='#a90329', GradientType=0);
 }
 
-@media screen and (max-width: 480px){ /* responsive form settings, when window width is 480px or less */
+@media screen and (max-width: 480px) {
+    /* responsive form settings, when window width is 480px or less */
 
-    #new_user{
-	font-size: 14px; /* decrease form font size */
+    #new_user {
+        font-size: 14px; /* decrease form font size */
     }
 
-    #new_user .formcolumn{
-	width: 100%;
-	float: none;
+    #new_user .formcolumn {
+        width: 100%;
+        float: none;
     }
 
-    #new_user .formcolumn:first-of-type{
-	margin-right: 0; /* remove right margin from first form column */
+    #new_user .formcolumn:first-of-type {
+        margin-right: 0; /* remove right margin from first form column */
     }
 
-    #new_user .formcolumn:nth-of-type(2){
-	padding-top: 2em; /* add padding to top of 2nd form column, so there is a gap between the 1st and 2nd column */
+    #new_user .formcolumn:nth-of-type(2) {
+        padding-top: 2em; /* add padding to top of 2nd form column, so there is a gap between the 1st and 2nd column */
     }
 
-    #new_user select{
-	width: 98%;
+    #new_user select {
+        width: 98%;
     }
 
 }
