@@ -1,6 +1,9 @@
 # -*- encoding : utf-8 -*-
 StockAnalysis::Application.routes.draw do
 
+  resources :user_homes
+
+
     resources :user_sessions, :users
     match 'login' => 'user_sessions#new', :as => :login
     match 'logout' => 'user_sessions#destroy', :as => :logout
