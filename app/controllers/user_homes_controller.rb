@@ -1,5 +1,5 @@
 class UserHomesController < ApplicationController
-    before_filter :require_user, :only => [:index]
+    before_filter :require_user, :only => [:show,:welcome]
     layout 'user_homes_layout'
     # GET /user_homes
     # GET /user_homes.json
@@ -13,16 +13,20 @@ class UserHomesController < ApplicationController
     end
 
     def welcome
-
-    end
-
-    # GET /user_homes/1
-    # GET /user_homes/1.json
-    def show
-        @user_home = UserHome.find(params[:id])
-
+        username = current_user.username
+        @user_home = UserHome.find_by_user_name(username)
         respond_to do |format|
             format.html # show.html.erb
+            format.json { render json: @user_home }
+        end
+    end
+
+    def show
+        my_name = current_user.username
+        @is_i_can_change = true if my_name == params[:username]
+        @user_home = UserHome.find_by_user_name(params[:username])
+        respond_to do |format|
+            format.html
             format.json { render json: @user_home }
         end
     end

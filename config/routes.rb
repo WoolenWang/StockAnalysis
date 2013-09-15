@@ -1,14 +1,13 @@
 # -*- encoding : utf-8 -*-
 StockAnalysis::Application.routes.draw do
 
-  resources :user_homes
-
 
     resources :user_sessions, :users
     match 'login' => 'user_sessions#new', :as => :login
     match 'logout' => 'user_sessions#destroy', :as => :logout
-    resource :account => 'users', :controller => 'users'
-    root :to => 'welcome#index'
+    match 'user_home/:username' =>'user_homes#show', :as => :user_home
+    resource :account, :controller => 'users'
+    root :to => 'user_sessions#new'
 
 
     # The priority is based upon order of creation:
@@ -66,6 +65,6 @@ StockAnalysis::Application.routes.draw do
 
     # This is a legacy wild controller route that's not recommended for RESTful applications.
     # Note: This route will make all actions in every controller accessible via GET requests.
-    # match ':controller(/:action(/:id))(.:format)'
+    match ':controller(/:action(/:id))(.:format)'
 end
 
