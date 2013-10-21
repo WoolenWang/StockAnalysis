@@ -1,8 +1,7 @@
 class CreateUserHomes < ActiveRecord::Migration
   def change
     create_table :user_homes do |t|
-      t.string :user_name
-      t.string :layout
+      t.integer :user_id   # one user has one user_homes
 
       t.timestamps
     end

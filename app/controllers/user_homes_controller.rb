@@ -4,30 +4,28 @@ class UserHomesController < ApplicationController
     # GET /user_homes
     # GET /user_homes.json
     def index
-        username = current_user.username
-        @user_home = UserHome.find_by_user_name(username)
+        @user_home = UserHome.find_by_user_id(current_user.id)
         respond_to do |format|
             format.html # index.html.erb
-            format.json { render json: @user_home }
+            format.json { render json: @user_home.to_json(:include => :layout) }
         end
     end
 
     def welcome
-        username = current_user.username
-        @user_home = UserHome.find_by_user_name(username)
         respond_to do |format|
             format.html # show.html.erb
-            format.json { render json: @user_home }
         end
     end
 
     def show
         my_name = current_user.username
         @is_i_can_change = true if my_name == params[:username]
-        @user_home = UserHome.find_by_user_name(params[:username])
+        logger.debug current_user.id
+        @user_home = UserHome.find_by_user_id(current_user.id)
+        logger.debug @user_home.to_json(:include => :layouts)
         respond_to do |format|
             format.html
-            format.json { render json: @user_home }
+            format.json { render json: @user_home.to_json(:include => :layouts) }
         end
     end
 

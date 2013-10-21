@@ -13,8 +13,10 @@ class ApplicationController < ActionController::Base
 
     def current_user
         logger.debug 'ApplicationController::current_user'
+        #logger.debug 'CurrentUser is ' + @current_user.username if defined?(@current_user)
         return @current_user if defined?(@current_user)
         @current_user = current_user_session && current_user_session.user
+        logger.debug 'CurrentUser is ' + @current_user.username if(@current_user)
     end
 
     def require_user

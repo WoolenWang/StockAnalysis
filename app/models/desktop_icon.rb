@@ -1,4 +1,4 @@
 class DesktopIcon < ActiveRecord::Base
-  attr_accessible :icon_id,:title, :url, :win_height, :win_width
-    belongs_to :user_home
+    attr_accessible :identify_name, :title, :url, :win_height, :win_width, :icon_path
+    has_and_belongs_to_many :layouts
 end

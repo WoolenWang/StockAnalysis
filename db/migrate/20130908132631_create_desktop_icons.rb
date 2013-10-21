@@ -5,7 +5,7 @@ class CreateDesktopIcons < ActiveRecord::Migration
             t.string :url
             t.integer :win_width
             t.integer :win_height
-            t.string :icon_id
+            t.string :identify_name
             t.string :icon_path
 
             t.timestamps

@@ -11,22 +11,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130908132631) do
+ActiveRecord::Schema.define(:version => 20130919020506) do
 
   create_table "desktop_icons", :force => true do |t|
     t.string   "title"
     t.string   "url"
     t.integer  "win_width"
     t.integer  "win_height"
-    t.string   "icon_id"
+    t.string   "identify_name"
     t.string   "icon_path"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "desktop_icons_layouts", :id => false, :force => true do |t|
+    t.integer "desktop_icon_id"
+    t.integer "layout_id"
+  end
+
+  create_table "layouts", :force => true do |t|
+    t.integer  "location"
+    t.integer  "user_home_id"
+    t.string   "order"
+    t.string   "type"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "user_homes", :force => true do |t|
-    t.string   "user_name"
-    t.string   "layout"
+    t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

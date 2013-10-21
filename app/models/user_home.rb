@@ -1,5 +1,5 @@
 class UserHome < ActiveRecord::Base
-  attr_accessible :layout, :user_name
-    has_many :desktop_icons
-    belongs_to :user
+    attr_accessible :layouts
+    has_many :layouts,:dependent => :destroy,:inverse_of => :user_home
+    belongs_to :user,:inverse_of => :user_home
 end
