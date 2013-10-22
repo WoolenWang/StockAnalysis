@@ -20,13 +20,14 @@ group :assets do
     gem 'uglifier', '>= 1.0.3'
 end
 # javascript脚本运行
-gem 'jquery-rails'
-gem 'execjs'
-gem 'therubyracer'
+gem 'jquery-rails','3.0.4'
+gem 'execjs','1.4.0'
+gem 'therubyracer','0.11.4'
 # 用户登陆
-gem 'authlogic'
+gem 'authlogic','3.1.0'
 # 数据库
 gem 'mysql2', '0.3.13'
+# running server
 gem 'thin', '1.5.1'
 
 # To use ActiveModel has_secure_password

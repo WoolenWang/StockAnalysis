@@ -6,6 +6,21 @@
     $(window).load(function () {
         myLib.stopProgress();
         var lrBarIconData = {
+            <% lrBar_ok = false %>
+            <%  @page_user_home.layouts.each do |layout| %>
+            <% if layout.location == 0  %>
+            <% layout.desktop_icons.each do |icon| %>
+            '<%= icon.identify_name %>': {
+                'title': '<%= icon.title %>',
+                'url': '<%= icon.url %>',
+                'winWidth': <%= icon.win_width %>,
+                'winHeight': <%= icon.win_height %>
+            }<%= ',' unless icon == layout.desktop_icons.last %>
+            <% end %>
+            <% lrBar_ok = true %>
+            <% end %>
+            <% end %>
+            <% unless lrBar_ok %>
             'app0': {
                 'title': 'jsfoot网页特效',
                 'url': 'http://www.jsfoot.com/',
@@ -30,8 +45,24 @@
                 'winWidth': 1100,
                 'winHeight': 650
             }
+            <% end %>
         };
         var deskIconData = {
+            <% is_desk_icon_data = false %>
+            <%  @page_user_home.layouts.each do |layout| %>
+            <% if layout.location != 0  %>
+            <% layout.desktop_icons.each do |icon| %>
+            '<%= icon.identify_name %>': {
+                'title': '<%= icon.title %>',
+                'url': '<%= icon.url %>',
+                'winWidth': <%= icon.win_width %>,
+                'winHeight': <%= icon.win_height %>
+            }<%= ',' unless layout ==@page_user_home.layouts.last and icon == layout.desktop_icons.last %>
+            <% end %>
+            <% is_desk_icon_data = true %>
+            <% end %>
+            <% end %>
+            <% unless is_desk_icon_data %>
             'kuwoMusic': {
                 'title': '酷我音乐盒',
                 'url': 'http://mbox.kuwo.cn/',
@@ -140,48 +171,9 @@
                 'winWidth': 930,
                 'winHeight': 500
             }
+            <% end %>
         };
-        alert("<%= user_home_path(current_user.username) -%>");
-        $.ajax({
-            url: '<%= user_home_path(current_user.username) -%>'+'.json',
-            dataType: 'jsonp',
-            data: '',
-            jsonp: 'callback',
-            success: function (result) {
-                alert("<%= user_home_path(current_user.username) -%>");
-                alert(result);
-                deskIconData_tmp = result.desktop_icons;
-                deskIconData = {};
-                alert(deskIconData_tmp);
-                deskIconData[deskIconData_tmp.icon_id] = {
-                    'title' : deskIconData_tmp.title,
-                    'url' : deskIconData_tmp.url,
-                    'winWidth' : deskIconData_tmp.winWidth,
-                    'winHeight' : deskIconData_tmp.winHeight
-                };
-            },
-            timeout: 3000
-        });
-
-
-        //存储桌面布局元素的jquery对象
-        myLib.desktop.desktopPanel();
-
-        //初始化桌面背景
-        myLib.desktop.wallpaper.init("/assets/login-bg.jpg");
-
-        //初始化任务栏
-        myLib.desktop.taskBar.init();
-
-        //初始化桌面图标
-        myLib.desktop.deskIcon.init(deskIconData);
-
-        //初始化桌面导航栏
-        myLib.desktop.navBar.init();
-
-        //初始化侧边栏
-        myLib.desktop.lrBar.init(lrBarIconData);
-
+        init_desktop(lrBarIconData, deskIconData);
         //欢迎窗口
         myLib.desktop.win.newWin({
             WindowTitle: '欢迎窗口',
@@ -205,102 +197,125 @@ href="#" title="桌面4"></a></div>
 
 <div id="desktopPanel">
   <div id="desktopInnerPanel">
-    <ul class="deskIcon currDesktop">
-      <li class="desktop_icon" id="leshiwang"><span class="icon"><img src="/assets/user_home/icon/icon4.png"/></span>
+    <% desktop_icon_div = false %>
+    <% @page_user_home.layouts.each do |layout| %>
+        <% desktop_icon_div = true %>
+        <% if layout.location != 0; %>
+            <ul class="deskIcon currDesktop">
+        <% else %>
+            <ul class="deskIcon">
+        <% end %>
+        <% layout.desktop_icons.each do |icon| %>
+            <li class="desktop_icon" id="<%= icon.identify_name %>">
+              <span class="icon"><img src="<%= icon.icon_path %>"/></span>
 
-        <div class="text">乐视网<s></s></div>
-      </li>
-      <li class="desktop_icon" id="Pixlr"><span class="icon"><img src="/assets/user_home/icon/icon6.png"/></span>
+              <div class="text"><%= icon.title %>
+                <s></s></div>
+            </li>
+        <% end %>
+        <li class="desktop_icon add_icon"><span class="icon"><img src="/assets/user_home/images/add_icon.png"/></span>
 
-        <div class="text">Pixlr<s></s></div>
-      </li>
-      <li class="desktop_icon" id="dubianFim"><span class="icon"><img src="/assets/user_home/icon/icon7.png"/></span>
+          <div class="text">添加<s></s></div>
+        </li>
+        </ul>
+    <% end %>
+    <% unless desktop_icon_div %>
+        <li class="desktop_icon" id="leshiwang"><span class="icon"><img src="/assets/user_home/icon/icon4.png"/></span>
 
-        <div class="text">豆瓣FIM<s></s></div>
-      </li>
-      <li class="desktop_icon" id="kuwoMusic"><span class="icon"><img src="/assets/user_home/icon/icon8.png"/></span>
+          <div class="text">乐视网<s></s></div>
+        </li>
+        <li class="desktop_icon" id="Pixlr"><span class="icon"><img src="/assets/user_home/icon/icon6.png"/></span>
 
-        <div class="text">酷我音乐盒<s></s></div>
-      </li>
-      <li class="desktop_icon" id="qidian"><span class="icon"><img src="/assets/user_home/icon/icon9.png"/></span>
+          <div class="text">Pixlr<s></s></div>
+        </li>
+        <li class="desktop_icon" id="dubianFim"><span class="icon"><img src="/assets/user_home/icon/icon7.png"/></span>
 
-        <div class="text">起点中文<s></s></div>
-      </li>
-      <li class="desktop_icon" id="hudong"><span class="icon"><img src="/assets/user_home/icon/icon10.png"/></span>
+          <div class="text">豆瓣FIM<s></s></div>
+        </li>
+        <li class="desktop_icon" id="kuwoMusic"><span class="icon"><img src="/assets/user_home/icon/icon8.png"/></span>
 
-        <div class="text">互动百科<s></s></div>
-      </li>
-      <li class="desktop_icon" id="qianqianMusic"><span class="icon"><img src="/assets/user_home/icon/icon5.png"/></span>
+          <div class="text">酷我音乐盒<s></s></div>
+        </li>
+        <li class="desktop_icon" id="qidian"><span class="icon"><img src="/assets/user_home/icon/icon9.png"/></span>
 
-        <div class="text">千千音乐<s></s></div>
-      </li>
-      <li class="desktop_icon add_icon"><span class="icon"><img src="/assets/user_home/images/add_icon.png"/></span>
+          <div class="text">起点中文<s></s></div>
+        </li>
+        <li class="desktop_icon" id="hudong"><span class="icon"><img src="/assets/user_home/icon/icon10.png"/></span>
 
-        <div class="text">添加<s></s></div>
-      </li>
-    </ul>
-    <ul class="deskIcon">
-      <li class="desktop_icon" id="zfMeishi"><span class="icon"><img src="/assets/user_home/icon/icon13.png"/></span>
+          <div class="text">互动百科<s></s></div>
+        </li>
+        <li class="desktop_icon" id="qianqianMusic">
+          <span class="icon"><img src="/assets/user_home/icon/icon5.png"/></span>
 
-        <div class="text">主妇美食<s></s></div>
-      </li>
-      <li class="desktop_icon" id="mglvyou"><span class="icon"><img src="/assets/user_home/icon/icon12.png"/></span>
+          <div class="text">千千音乐<s></s></div>
+        </li>
+        </ul>
+        <ul class="deskIcon">
+          <li class="desktop_icon" id="zfMeishi">
+            <span class="icon"><img src="/assets/user_home/icon/icon13.png"/></span>
 
-        <div class="text">芒果旅游<s></s></div>
-      </li>
-      <li class="desktop_icon" id="taobao"><span class="icon"><img src="/assets/user_home/icon/icon14.png"/></span>
+            <div class="text">主妇美食<s></s></div>
+          </li>
+          <li class="desktop_icon" id="mglvyou"><span class="icon"><img src="/assets/user_home/icon/icon12.png"/></span>
 
-        <div class="text">淘宝网<s></s></div>
-      </li>
-      <li class="desktop_icon" id="qingshu"><span class="icon"><img src="/assets/user_home/icon/icon15.png"/></span>
+            <div class="text">芒果旅游<s></s></div>
+          </li>
+          <li class="desktop_icon" id="taobao"><span class="icon"><img src="/assets/user_home/icon/icon14.png"/></span>
 
-        <div class="text">情书<s></s></div>
-      </li>
-      <li class="desktop_icon" id="fenghuang"><span class="icon"><img src="/assets/user_home/icon/icon16.png"/></span>
+            <div class="text">淘宝网<s></s></div>
+          </li>
+          <li class="desktop_icon" id="qingshu"><span class="icon"><img src="/assets/user_home/icon/icon15.png"/></span>
 
-        <div class="text">凤凰网<s></s></div>
-      </li>
-      <li class="desktop_icon" id="zhongguancun"><span class="icon"><img src="/assets/user_home/icon/icon17.png"/></span>
+            <div class="text">情书<s></s></div>
+          </li>
+          <li class="desktop_icon" id="fenghuang">
+            <span class="icon"><img src="/assets/user_home/icon/icon16.png"/></span>
 
-        <div class="text">中关村在线<s></s></div>
-      </li>
-      <li class="desktop_icon add_icon"><span class="icon"><img src="/assets/user_home/images/add_icon.png"/></span>
+            <div class="text">凤凰网<s></s></div>
+          </li>
+          <li class="desktop_icon" id="zhongguancun">
+            <span class="icon"><img src="/assets/user_home/icon/icon17.png"/></span>
 
-        <div class="text">添加<s></s></div>
-      </li>
-    </ul>
-    <ul class="deskIcon">
-      <li class="desktop_icon" id="win35"><span class="icon"><img src="/assets/user_home/icon/icon18.png"/></span>
+            <div class="text">中关村在线<s></s></div>
+          </li>
+          <li class="desktop_icon add_icon"><span class="icon"><img src="/assets/user_home/images/add_icon.png"/></span>
 
-        <div class="text">搜狐汽车<s></s></div>
-      </li>
-      <li class="desktop_icon" id="win36"><span class="icon"><img src="/assets/user_home/icon/icon19.png"/></span>
+            <div class="text">添加<s></s></div>
+          </li>
+        </ul>
+        <ul class="deskIcon">
+          <li class="desktop_icon" id="win35"><span class="icon"><img src="/assets/user_home/icon/icon18.png"/></span>
 
-        <div class="text">布丁电影票<s></s></div>
-      </li>
-      <li class="desktop_icon" id="win37"><span class="icon"><img src="/assets/user_home/icon/icon8.png"/></span>
+            <div class="text">搜狐汽车<s></s></div>
+          </li>
+          <li class="desktop_icon" id="win36"><span class="icon"><img src="/assets/user_home/icon/icon19.png"/></span>
 
-        <div class="text">中国数学资源网<s></s></div>
-      </li>
-      <li class="desktop_icon add_icon"><span class="icon"><img src="/assets/user_home/images/add_icon.png"/></span>
+            <div class="text">布丁电影票<s></s></div>
+          </li>
+          <li class="desktop_icon" id="win37"><span class="icon"><img src="/assets/user_home/icon/icon8.png"/></span>
 
-        <div class="text">添加<s></s></div>
-      </li>
-    </ul>
-    <ul class="deskIcon">
-      <li class="desktop_icon" id="win38"><span class="icon"><img src="/assets/user_home/icon/icon20.png"/></span>
+            <div class="text">中国数学资源网<s></s></div>
+          </li>
+          <li class="desktop_icon add_icon"><span class="icon"><img src="/assets/user_home/images/add_icon.png"/></span>
 
-        <div class="text">火影忍者漫画动画<s></s></div>
-      </li>
-      <li class="desktop_icon" id="win39"><span class="icon"><img src="/assets/user_home/icon/icon21.png"/></span>
+            <div class="text">添加<s></s></div>
+          </li>
+        </ul>
+        <ul class="deskIcon">
+          <li class="desktop_icon" id="win38"><span class="icon"><img src="/assets/user_home/icon/icon20.png"/></span>
 
-        <div class="text">潇湘书院<s></s></div>
-      </li>
-      <li class="desktop_icon add_icon"><span class="icon"><img src="/assets/user_home/images/add_icon.png"/></span>
+            <div class="text">火影忍者漫画动画<s></s></div>
+          </li>
+          <li class="desktop_icon" id="win39"><span class="icon"><img src="/assets/user_home/icon/icon21.png"/></span>
 
-        <div class="text">添加<s></s></div>
-      </li>
-    </ul>
+            <div class="text">潇湘书院<s></s></div>
+          </li>
+          <li class="desktop_icon add_icon"><span class="icon"><img src="/assets/user_home/images/add_icon.png"/></span>
+
+            <div class="text">添加<s></s></div>
+          </li>
+        </ul>
+    <% end %>
   </div>
 </div>
 <!--desktopPanel end-->
@@ -318,22 +333,38 @@ href="#" title="桌面4"></a></div>
 
 <div id="lr_bar">
   <ul id="default_app">
-    <li id="app0"><span><img src="/assets/user_home/icon/icon1.png" title="我的博客"/></span>
+    <% default_app = false %>
+    <% @page_user_home.layouts.each do |layout| %>
+        <% default_app = true %>
+        <% if layout.location == 0; %>
+            <% layout.desktop_icons.each do |icon| %>
+                <li id="<%= icon.identify_name %>">
+                  <span><img src="<%= icon.icon_path %>" title="<%= icon.title %>"/></span>
 
-      <div class="text">我的博客<s></s></div>
-    </li>
-    <li id="app1"><span><img src="/assets/user_home/icon/icon2.png" title="关于我"/></span>
+                  <div class="text"><%= icon.title %>
+                    <s></s></div>
+                </li>
+            <% end %>
+        <% end %>
+    <% end %>
+    <% unless default_app %>
+        <li id="app0"><span><img src="/assets/user_home/icon/icon1.png" title="我的博客"/></span>
 
-      <div class="text">关于我<s></s></div>
-    </li>
-    <li id="app2"><span><img src="/assets/user_home/icon/icon3.png" title="作品"/></span>
+          <div class="text">我的博客<s></s></div>
+        </li>
+        <li id="app1"><span><img src="/assets/user_home/icon/icon2.png" title="关于我"/></span>
 
-      <div class="text">作品<s></s></div>
-    </li>
-    <li id="app3"><span><img src="/assets/user_home/icon/icon11.png" title="资源分享"/></span>
+          <div class="text">关于我<s></s></div>
+        </li>
+        <li id="app2"><span><img src="/assets/user_home/icon/icon3.png" title="作品"/></span>
 
-      <div class="text">资源分享<s></s></div>
-    </li>
+          <div class="text">作品<s></s></div>
+        </li>
+        <li id="app3"><span><img src="/assets/user_home/icon/icon11.png" title="资源分享"/></span>
+
+          <div class="text">资源分享<s></s></div>
+        </li>
+    <% end %>
   </ul>
 
   <div id="default_tools"><span id="showZm_btn" title="全屏"></span><span id="shizhong_btn" title="时钟"></span><span

@@ -69,9 +69,9 @@ class ColorLoggerFormatter < Logger::Formatter
         return '' if _msg == '' or _msg == "\n"
         color = SEVERITY_TO_COLOR_MAP[severity]
         if windows?
-            time_str = WINDOWS_TIME_FORMAT % [time.to_s(:short)]
+            time_str = WINDOWS_TIME_FORMAT % [time.strftime('%m-%d %H:%M:%S')]
         else
-            time_str = LINUX_TIME_FORMAT % [time.to_s(:short)]
+            time_str = LINUX_TIME_FORMAT % [time.strftime('%m-%d %H:%M:%S')]
         end
         time_str + format_message(severity + ' - ' + _msg, color)
     end
