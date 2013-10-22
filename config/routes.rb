@@ -5,8 +5,9 @@ StockAnalysis::Application.routes.draw do
     resources :user_sessions, :users
     match 'login' => 'user_sessions#new', :as => :login
     match 'logout' => 'user_sessions#destroy', :as => :logout
+    match 'user_home/:username' =>'user_homes#show', :as => :user_home
+    match 'user_home/:username' =>'user_homes#show', :as => :user_home
     resource :user_homes
-    match 'user_homes/:username' =>'user_homes#show', :as => :user_home
     resource :account, :controller => 'users'
     root :to => 'user_sessions#new'
 

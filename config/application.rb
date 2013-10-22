@@ -2,6 +2,7 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+require File.expand_path('../../lib/Log/color_logger_formatter', __FILE__)
 
 if defined?(Bundler)
     # If you precompile assets before deploying to production, use this line
@@ -42,6 +43,12 @@ module StockAnalysis
 
         # Enable escaping HTML in JSON.
         config.active_support.escape_html_entities_in_json = true
+
+        # Configue the logerformater
+        config.logger = Logger.new("log/#{Rails.env}.log")
+        config.logger.formatter = ColorLoggerFormatter.new
+        ActiveResource::Base.logger =  Logger.new("log/#{Rails.env}.log")
+        ActiveResource::Base.logger.formatter = ColorLoggerFormatter.new
 
         # Use SQL instead of Active Record's schema dumper when creating the database.
         # This is necessary if your schema can't be completely dumped by the schema dumper,

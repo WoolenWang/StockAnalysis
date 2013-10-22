@@ -141,14 +141,14 @@
                 'winHeight': 500
             }
         };
-        alert("<%= user_home_path -%>");
+        alert("<%= user_home_path(current_user.username) -%>");
         $.ajax({
-            url: '<%= user_home_path -%>'+'.json',
+            url: '<%= user_home_path(current_user.username) -%>'+'.json',
             dataType: 'jsonp',
             data: '',
             jsonp: 'callback',
             success: function (result) {
-                alert("<%= user_home_path -%>");
+                alert("<%= user_home_path(current_user.username) -%>");
                 alert(result);
                 deskIconData_tmp = result.desktop_icons;
                 deskIconData = {};
