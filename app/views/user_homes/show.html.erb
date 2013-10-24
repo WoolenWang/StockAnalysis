@@ -19,7 +19,7 @@
             <% end %>
             <% lrBar_ok = true %>
             <% end %>
-            <% end %>
+            <% end if @page_user_home%>
             <% unless lrBar_ok %>
             'app0': {
                 'title': 'jsfoot网页特效',
@@ -61,7 +61,7 @@
             <% end %>
             <% is_desk_icon_data = true %>
             <% end %>
-            <% end %>
+            <% end if @page_user_home%>
             <% unless is_desk_icon_data %>
             'kuwoMusic': {
                 'title': '酷我音乐盒',
@@ -218,7 +218,7 @@ href="#" title="桌面4"></a></div>
           <div class="text">添加<s></s></div>
         </li>
         </ul>
-    <% end %>
+    <% end if @page_user_home%>
     <% unless desktop_icon_div %>
         <li class="desktop_icon" id="leshiwang"><span class="icon"><img src="/assets/user_home/icon/icon4.png"/></span>
 
@@ -346,7 +346,7 @@ href="#" title="桌面4"></a></div>
                 </li>
             <% end %>
         <% end %>
-    <% end %>
+    <% end if @page_user_home%>
     <% unless default_app %>
         <li id="app0"><span><img src="/assets/user_home/icon/icon1.png" title="我的博客"/></span>
 

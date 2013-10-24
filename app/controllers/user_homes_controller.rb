@@ -21,8 +21,11 @@ class UserHomesController < ApplicationController
         my_name = current_user.username
         @is_i_can_change = true if my_name == params[:username]
         @page_user = User.find_by_username(params[:username])
-        logger.debug current_user.id
-        @page_user_home = UserHome.find_by_user_id(@page_user.id)
+	    userid = current_user.id unless @page_user
+	    userid = @page_user.id if @page_user
+        logger.debug userid
+        @page_user_home = UserHome.find_by_user_id(userid)
+        logger.debug @page_user_home.to_json(:include => {:layouts =>{:include => :desktop_icons}})
         respond_to do |format|
             format.html
             format.json { render json: @page_user_home.to_json(:include => {:layouts =>{:include => :desktop_icons}}) }
