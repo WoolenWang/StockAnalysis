@@ -25,7 +25,7 @@ class UserHomesController < ApplicationController
 	    userid = @page_user.id if @page_user
         logger.debug userid
         @page_user_home = UserHome.find_by_user_id(userid)
-        logger.debug @page_user_home.to_json(:include => {:layouts =>{:include => :desktop_icons}})
+        #logger.debug @page_user_home.to_json(:include => {:layouts =>{:include => :desktop_icons}})
         respond_to do |format|
             format.html
             format.json { render json: @page_user_home.to_json(:include => {:layouts =>{:include => :desktop_icons}}) }

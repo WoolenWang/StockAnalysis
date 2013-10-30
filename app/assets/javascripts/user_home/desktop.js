@@ -539,8 +539,8 @@ myLib.desktop.lrBar={
 								 },function(){
 									$(this).removeClass('btnOver');		  
 										})
+        // Here is the lrbar click function
 		.click(function(){
-		                
  						var data=$(this).data("iconData"),id=this.id;
 							myLib.desktop.win.newWin({
 													 WindowTitle:data.title,

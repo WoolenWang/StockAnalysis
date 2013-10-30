@@ -200,17 +200,16 @@ href="#" title="桌面4"></a></div>
     <% desktop_icon_div = false %>
     <% @page_user_home.layouts.each do |layout| %>
         <% desktop_icon_div = true %>
-        <% if layout.location != 0; %>
+        <% next if layout.location == 0 %>
+        <% if layout.location == 1 %>
             <ul class="deskIcon currDesktop">
         <% else %>
             <ul class="deskIcon">
         <% end %>
         <% layout.desktop_icons.each do |icon| %>
-            <li class="desktop_icon" id="<%= icon.identify_name %>">
-              <span class="icon"><img src="<%= icon.icon_path %>"/></span>
-
-              <div class="text"><%= icon.title %>
-                <s></s></div>
+            <li class="desktop_icon" id="<%= icon.identify_name -%>">
+              <span class="icon"><img src="<%= icon.icon_path -%>"/></span>
+              <div class="text"><%= icon.title -%><s></s></div>
             </li>
         <% end %>
         <li class="desktop_icon add_icon"><span class="icon"><img src="/assets/user_home/images/add_icon.png"/></span>
@@ -336,13 +335,11 @@ href="#" title="桌面4"></a></div>
     <% default_app = false %>
     <% @page_user_home.layouts.each do |layout| %>
         <% default_app = true %>
-        <% if layout.location == 0; %>
+        <% if layout.location == 0 %>
             <% layout.desktop_icons.each do |icon| %>
                 <li id="<%= icon.identify_name %>">
-                  <span><img src="<%= icon.icon_path %>" title="<%= icon.title %>"/></span>
-
-                  <div class="text"><%= icon.title %>
-                    <s></s></div>
+                  <span><img src="<%= icon.icon_path -%>" title="<%= icon.title -%>"/></span>
+                  <div class="text"><%= icon.title -%><s></s></div>
                 </li>
             <% end %>
         <% end %>
