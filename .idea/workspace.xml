@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59645582-65d4-4aff-bfdf-3d2b7d4ea81d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="StockAnalysis.iws" />
@@ -36,7 +37,16 @@
       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="12" selection-start="850" selection-end="850" vertical-scroll-proportion="0.430622" vertical-offset="540" max-vertical-offset="1180">
+            <state line="29" column="10" selection-start="703" selection-end="703" vertical-scroll-proportion="0.6698565" vertical-offset="300" max-vertical-offset="1260">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="capybara.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///usr/local/rvm/gems/ruby-1.9.3-p448@global/gems/capybara-2.0.2/lib/capybara.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7380">
               <folding />
             </state>
           </provider>
@@ -605,13 +615,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130908132141_create_user_homes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="25" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0" vertical-offset="40" max-vertical-offset="300">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20130919015707_create_layouts.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="20" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="360">
@@ -949,9 +952,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/local/rvm/gems/ruby-1.9.3-p448@global/gems/capybara-2.0.2/lib/capybara.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7380">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="12" selection-start="850" selection-end="850" vertical-scroll-proportion="0.430622" vertical-offset="540" max-vertical-offset="1180">
+        <state line="29" column="10" selection-start="703" selection-end="703" vertical-scroll-proportion="0.6698565" vertical-offset="300" max-vertical-offset="1260">
           <folding />
         </state>
       </provider>

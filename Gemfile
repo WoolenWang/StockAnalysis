@@ -26,6 +26,10 @@ group :assets do
     # gem 'therubyracer', :platforms => :ruby
     gem 'uglifier', '>= 1.0.3'
 end
+group :test do
+    # 测试工具
+    gem 'capybara','2.0.2'
+end
 group :development,:test do
     # 使用Rspec来测试代码
     gem 'rspec-rails', '2.14.0'
