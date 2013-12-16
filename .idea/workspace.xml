@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59645582-65d4-4aff-bfdf-3d2b7d4ea81d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="" />
     </list>
     <ignored path="StockAnalysis.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,7 +36,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="18" selection-start="825" selection-end="837" vertical-scroll-proportion="0.8133971" vertical-offset="360" max-vertical-offset="1180">
+            <state line="25" column="35" selection-start="632" selection-end="632" vertical-scroll-proportion="0.33492824" vertical-offset="360" max-vertical-offset="1180">
               <folding />
             </state>
           </provider>
@@ -952,7 +951,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="18" selection-start="825" selection-end="837" vertical-scroll-proportion="0.8133971" vertical-offset="360" max-vertical-offset="1180">
+        <state line="25" column="35" selection-start="632" selection-end="632" vertical-scroll-proportion="0.33492824" vertical-offset="360" max-vertical-offset="1180">
           <folding />
         </state>
       </provider>
