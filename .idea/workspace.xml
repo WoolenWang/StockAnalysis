@@ -36,7 +36,7 @@
       <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="10" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1260">
+            <state line="22" column="32" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1260">
               <folding />
             </state>
           </provider>
@@ -54,7 +54,34 @@
       <file leaf-file-name="application.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/application.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="74" selection-start="2271" selection-end="2533" vertical-scroll-proportion="0.38277513" vertical-offset="780" max-vertical-offset="1560">
+            <state line="70" column="55" selection-start="3522" selection-end="3522" vertical-scroll-proportion="0.6172249" vertical-offset="1142" max-vertical-offset="1620">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="production.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="32" selection-start="2312" selection-end="2312" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1500">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="environment.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/environment.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="36" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="260">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///usr/local/rvm/gems/ruby-1.9.3-p448@global/gems/railties-3.2.13/lib/rails/application.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="133" column="8" selection-start="5114" selection-end="5114" vertical-scroll-proportion="0.0" vertical-offset="2521" max-vertical-offset="6520">
               <folding />
             </state>
           </provider>
@@ -179,6 +206,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="StockAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StockAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StockAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StockAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StockAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="environments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -628,27 +687,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/local/rvm/gems/ruby-1.9.3-p448@global/gems/activerecord-3.2.13/lib/active_record/associations.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1196" column="10" selection-start="61292" selection-end="61292" vertical-scroll-proportion="0.0" vertical-offset="23920" max-vertical-offset="32260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/user_homes/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="138" column="33" selection-start="5107" selection-end="5107" vertical-scroll-proportion="0.0" vertical-offset="2760" max-vertical-offset="7940">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20130908132141_create_user_homes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="25" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0" vertical-offset="40" max-vertical-offset="300">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20130919015707_create_layouts.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="20" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="360">
@@ -937,20 +975,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="10" selection-start="703" selection-end="703" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Rakefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="37" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Log/color_logger_formatter.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="11" selection-start="690" selection-end="690" vertical-scroll-proportion="0.6698565" vertical-offset="0" max-vertical-offset="1660">
@@ -972,9 +996,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/local/rvm/gems/ruby-1.9.3-p448@global/gems/railties-3.2.13/lib/rails/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="133" column="8" selection-start="5114" selection-end="5114" vertical-scroll-proportion="0.0" vertical-offset="2521" max-vertical-offset="6520">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="37" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="32" selection-start="478" selection-end="478" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="36" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="32" selection-start="2312" selection-end="2312" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="1500">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="74" selection-start="2271" selection-end="2533" vertical-scroll-proportion="0.38277513" vertical-offset="780" max-vertical-offset="1560">
+        <state line="70" column="55" selection-start="3522" selection-end="3522" vertical-scroll-proportion="0.6172249" vertical-offset="1142" max-vertical-offset="1620">
           <folding />
         </state>
       </provider>
