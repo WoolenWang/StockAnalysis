@@ -45,10 +45,10 @@ module StockAnalysis
         config.active_support.escape_html_entities_in_json = true
 
         # Configue the logerformater
-        config.logger = Logger.new(File.expand_path("../../log/#{Rails.env}.log", __FILE__))
-        config.logger.formatter = ColorLoggerFormatter.new
-        ActiveResource::Base.logger =  Logger.new(File.expand_path("../../log/#{Rails.env}.log", __FILE__))
-        ActiveResource::Base.logger.formatter = ColorLoggerFormatter.new
+        #config.logger = Logger.new(File.expand_path("../../log/#{Rails.env}.log", __FILE__))
+        #config.logger.formatter = ColorLoggerFormatter.new
+        #ActiveResource::Base.logger =  Logger.new(File.expand_path("../../log/#{Rails.env}.log", __FILE__))
+        #ActiveResource::Base.logger.formatter = ColorLoggerFormatter.new
 
         # Use SQL instead of Active Record's schema dumper when creating the database.
         # This is necessary if your schema can't be completely dumped by the schema dumper,
