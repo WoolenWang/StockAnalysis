@@ -2,7 +2,7 @@
 <div class="login">
   <div class="menus">
     <div class="public">
-      <a href="http://julying.com" target="_blank">使用帮助</a><a href="http://julying.com" target="_blank">联系开发者</a></div>
+      <a href="http://julying.com" target="_blank">使用帮助</a><a href="http://t.qq.com/just_woolen" target="_blank">联系开发者</a></div>
   </div>
   <div class="box png">
     <%= form_for @user_session, :url => user_sessions_path do |f| %>
@@ -17,8 +17,8 @@
             </div>
         <% end %>
         <div class="header">
-          <h2 class="logo png"><a href="http://julying.com" target="_blank"></a></h2>
-          <span class="alt">管理员登录</span>
+          <h2 class="logo png"><a href="http://t.qq.com/woolen" target="_blank"></a></h2>
+          <span class="alt">用户登录</span>
         </div>
         <ul>
           <li><%= f.label :username %><%= f.text_field :username, :class => 'text' %></li>
@@ -26,7 +26,7 @@
           <li class="submits"><%= f.submit "SIGN IN", :class => 'submit' %></li>
         </ul>
         <div class="copyright">&copy; 1988 - <%= Time.now.year %> |
-          <a href="http://julying.com" target="_blank" title="WoolenCMS">Woolen</a> |
+          <a href="http://t.qq.com/just_woolen" target="_blank" title="WoolenCMS" style="color: #AAA" >Woolen</a> |
           <a title="沃伦的博客" href="http://t.qq.com/just_woolen" target="_blank" class="weibo tencent">王沃伦的腾讯微博</a>
         </div>
     <% end %>

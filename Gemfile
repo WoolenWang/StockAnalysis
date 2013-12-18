@@ -33,6 +33,12 @@ end
 group :development,:test do
     # 使用Rspec来测试代码
     gem 'rspec-rails', '2.14.0'
+    # 使用 guard-rspec来自动测试
+    gem 'guard-rspec'
+    # 使用spork来加速自动测试
+    gem 'spork','0.9.2'
+    # 使用guard-spork来关联两者
+    gem 'guard-spork'
     # 数据库
     gem 'mysql2', '0.3.13'
 end
