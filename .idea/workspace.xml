@@ -2,32 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59645582-65d4-4aff-bfdf-3d2b7d4ea81d" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/desktop_icons.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/layouts.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/user_homes.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/users.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional/user_homes_controller_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional/user_sessions_controller_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/functional/users_controller_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/integration/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/performance/browsing_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/test_helper.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/.gitkeep" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/desktop_icon_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/helpers/user_homes_helper_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/helpers/user_sessions_helper_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/helpers/users_helper_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/layout_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/user_home_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/user_test.rb" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/fixtures/.gitkeep" afterPath="$PROJECT_DIR$/run_guard.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.rspec" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Guardfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/requests/login_pages_spec.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/spec/spec_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/StockAnalysis.iml" afterPath="$PROJECT_DIR$/.idea/StockAnalysis.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/user_sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/user_sessions/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="StockAnalysis.iws" />
@@ -65,16 +45,16 @@
       <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="18" selection-start="781" selection-end="781" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1380">
+            <state line="54" column="0" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.0" vertical-offset="902" max-vertical-offset="1380">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spec_helper.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="spec_helper.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="22" selection-start="3789" selection-end="3789" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2340">
+            <state line="93" column="22" selection-start="3789" selection-end="3789" vertical-scroll-proportion="-0.14832535" vertical-offset="1922" max-vertical-offset="2340">
               <folding />
             </state>
           </provider>
@@ -83,7 +63,25 @@
       <file leaf-file-name="login_pages_spec.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spec/requests/login_pages_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="26" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0" vertical-offset="2" max-vertical-offset="420">
+            <state line="16" column="59" selection-start="562" selection-end="562" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="520">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/user_sessions/new.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="7" column="68" selection-start="507" selection-end="507" vertical-scroll-proportion="-0.7692308" vertical-offset="120" max-vertical-offset="920">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form_helper.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///usr/local/rvm/gems/ruby-1.9.3-p448@global/gems/actionpack-3.2.13/lib/action_view/helpers/form_helper.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="688" column="10" selection-start="28944" selection-end="28944" vertical-scroll-proportion="0.0" vertical-offset="13625" max-vertical-offset="29860">
               <folding />
             </state>
           </provider>
@@ -110,16 +108,16 @@
       <file leaf-file-name="run_guard.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run_guard.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="22" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0" vertical-offset="182" max-vertical-offset="600">
+            <state line="14" column="3" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Guardfile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Guardfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Guardfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="46" selection-start="2016" selection-end="2016" vertical-scroll-proportion="2.271605" vertical-offset="0" max-vertical-offset="1120">
+            <state line="20" column="29" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1120">
               <folding />
             </state>
           </provider>
@@ -175,11 +173,11 @@
         <option value="$PROJECT_DIR$/config/application.rb" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/app/views/user_sessions/new.html.erb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/.rspec" />
         <option value="$PROJECT_DIR$/spec/spec_helper.rb" />
         <option value="$PROJECT_DIR$/run_guard.rb" />
         <option value="$PROJECT_DIR$/Guardfile" />
+        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/spec/requests/login_pages_spec.rb" />
       </list>
     </option>
@@ -245,6 +243,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StockAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="StockAnalysis" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="RailsProjectView" />
@@ -264,6 +276,7 @@
     <property name="FullScreen" value="false" />
     <property name="LayoutCode.rearrangeEntriesRHTML" value="false" />
     <property name="LayoutCode.rearrangeEntriesRuby" value="false" />
+    <property name="SearchEverywhereHistory" value="" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -667,7 +680,11 @@
       <created>1379240515357</created>
       <updated>1379240515357</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="弄好了rspec和guard了，删除了没用的Test目录&#10;">
+      <created>1387374799028</created>
+      <updated>1387374799028</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -694,6 +711,7 @@
     <frame x="-6" y="25" width="1688" height="944" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946634" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32945284" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32828283" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32908458" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -709,7 +727,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.330617" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946634" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -730,7 +747,8 @@
     <MESSAGE value="prepare_for_desktop" />
     <MESSAGE value="Finish_add_desktop" />
     <MESSAGE value="Ok_to_login_to_desktop" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ok_to_login_to_desktop" />
+    <MESSAGE value="弄好了rspec和guard了，删除了没用的Test目录&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="弄好了rspec和guard了，删除了没用的Test目录&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -949,18 +967,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/user_sessions/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="68" selection-start="507" selection-end="507" vertical-scroll-proportion="-2.4561403" vertical-offset="0" max-vertical-offset="920">
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#2;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <marker date="1387358603491" expanded="true" signature="-1:-1" placeholder="do ... end" />
-            <marker date="1387358603491" expanded="true" signature="-1:-1" placeholder="if ... end" />
-            <marker date="1387358603491" expanded="true" signature="-1:-1" placeholder="do ... end" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/application.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="39" selection-start="2092" selection-end="2092" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1620">
@@ -1010,13 +1016,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/environment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="36" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="260">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/rvm/gems/ruby-1.9.3-p448@global/gems/rspec-core-2.14.7/lib/rspec/core/configuration.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="267" column="10" selection-start="9047" selection-end="9047" vertical-scroll-proportion="-14.580646" vertical-offset="4888" max-vertical-offset="23600">
@@ -1038,13 +1037,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run_guard.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="22" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0" vertical-offset="182" max-vertical-offset="600">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/environments/test.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="0" selection-start="479" selection-end="479" vertical-scroll-proportion="0.430622" vertical-offset="0" max-vertical-offset="900">
@@ -1059,30 +1051,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Guardfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="29" selection-start="1055" selection-end="1055" vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="1120">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environment.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="36" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_guard.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="3" selection-start="365" selection-end="365" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="18" selection-start="781" selection-end="781" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1380">
+        <state line="54" column="0" selection-start="1199" selection-end="1199" vertical-scroll-proportion="0.0" vertical-offset="902" max-vertical-offset="1380">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/rvm/gems/ruby-1.9.3-p448@global/gems/actionpack-3.2.13/lib/action_view/helpers/form_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="688" column="10" selection-start="28944" selection-end="28944" vertical-scroll-proportion="0.0" vertical-offset="13625" max-vertical-offset="29860">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/user_sessions/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="68" selection-start="507" selection-end="507" vertical-scroll-proportion="-0.7692308" vertical-offset="120" max-vertical-offset="920">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/requests/login_pages_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="26" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0" vertical-offset="2" max-vertical-offset="420">
+        <state line="16" column="59" selection-start="562" selection-end="562" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="520">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spec/spec_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="22" selection-start="3789" selection-end="3789" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2340">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Guardfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="46" selection-start="2016" selection-end="2016" vertical-scroll-proportion="2.271605" vertical-offset="0" max-vertical-offset="1120">
+        <state line="93" column="22" selection-start="3789" selection-end="3789" vertical-scroll-proportion="-0.14832535" vertical-offset="1922" max-vertical-offset="2340">
           <folding />
         </state>
       </provider>
