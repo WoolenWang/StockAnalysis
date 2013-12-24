@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class UserHomesController < ApplicationController
     before_filter :require_user, :only => [:show,:welcome]
     layout 'user_homes_layout'

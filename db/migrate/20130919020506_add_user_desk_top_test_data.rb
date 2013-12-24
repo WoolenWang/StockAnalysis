@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class AddUserDeskTopTestData < ActiveRecord::Migration
   def up
       user = User.create(:username => 'admin',:encrypted_passwd => Digest::MD5.hexdigest('admin'),:email => 'admin@woolen.com')

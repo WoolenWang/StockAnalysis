@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class DesktopIconsLayouts < ActiveRecord::Migration
   def up
       create_table :desktop_icons_layouts, :id => false do |t|

@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateLayouts < ActiveRecord::Migration
   def change
     create_table :layouts do |t|

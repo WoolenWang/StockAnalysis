@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 #!/usr/bin/env ruby
 #
 # The application 'guard' is installed as part of a gem, and
