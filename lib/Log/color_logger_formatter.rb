@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class ColorLoggerFormatter < Logger::Formatter
     SEVERITY_TO_COLOR_MAP = { 'DEBUG' => 'sky', 'INFO' => 'green', 'WARN' => 'yellow', 'ERROR' => 'purple', 'FATAL' => 'red', 'UNKNOWN' => 'blue' }
     WIN_PRINTER = Pathname.new(File.join(__FILE__, '..', '..', 'bin', 'puts_color.exe')).realpath.to_s

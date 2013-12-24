@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 class CreateDesktopIcons < ActiveRecord::Migration
     def change
         create_table :desktop_icons do |t|
