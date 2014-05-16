@@ -1,0 +1,2 @@
+module SystemConsoleShowHelper
+end

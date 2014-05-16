@@ -3,7 +3,9 @@ class AddUserDeskTopTestData < ActiveRecord::Migration
   def up
       user = User.create(:username => 'admin',:encrypted_passwd => Digest::MD5.hexdigest('admin'),:email => 'admin@woolen.com')
       icons = []
-      4.times do |count|
+      icons << DesktopIcon.create(:title => '我的账户',:url => '/accounts/show',:win_width => 1100 ,:win_height => 650,
+                                  :identify_name => 'my_account',:icon_path => '/assets/user_home/icon/icon6.png')
+      3.times do |count|
           icons << DesktopIcon.create(:title => "baidu_#{count}",:url => 'http://www.baidu.com',:win_width => 1100 ,:win_height => 650,
                              :identify_name => "baidu_#{count}",:icon_path => '/assets/user_home/icon/icon6.png')
       end

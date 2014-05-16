@@ -18,6 +18,8 @@ case RUBY_VERSION
         gem 'authlogic', '3.1.0'
         # running server
         gem 'thin', '1.5.1'
+        # 人工智能
+        gem 'ai4r'
 
 
         # Gems used only for assets and not required

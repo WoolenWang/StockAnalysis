@@ -1,0 +1,33 @@
+<%= form_for(@stock_market_invest_log) do |f| %>
+  <% if @stock_market_invest_log.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@stock_market_invest_log.errors.count, "error") %> prohibited this stock_market_invest_log from being saved:</h2>
+
+      <ul>
+      <% @stock_market_invest_log.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :account_id %><br />
+    <%= f.number_field :account_id %>
+  </div>
+  <div class="field">
+    <%= f.label :operation %><br />
+    <%= f.text_field :operation %>
+  </div>
+  <div class="field">
+    <%= f.label :profit %><br />
+    <%= f.text_field :profit %>
+  </div>
+  <div class="field">
+    <%= f.label :policy %><br />
+    <%= f.text_field :policy %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

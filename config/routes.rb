@@ -2,13 +2,23 @@
 StockAnalysis::Application.routes.draw do
 
 
+
+
+
+
+  get "system_console_show/index"
+
+  get "system_console_show/show_policy"
+
+  get "system_console_show/show_users"
+
+  get "system_console_show/show_account"
+
     resources :user_sessions, :users
     match 'login' => 'user_sessions#new', :as => :login
     match 'logout' => 'user_sessions#destroy', :as => :logout
     match 'user_home/:username' =>'user_homes#show', :as => :user_home
     match 'user_home/:username' =>'user_homes#show', :as => :user_home
-    resource :user_homes
-    resource :account, :controller => 'users'
     root :to => 'user_sessions#new'
 
 

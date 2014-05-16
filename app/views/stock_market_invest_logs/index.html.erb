@@ -1,0 +1,29 @@
+<h1>Listing stock_market_invest_logs</h1>
+
+<table>
+  <tr>
+    <th>Account</th>
+    <th>Operation</th>
+    <th>Profit</th>
+    <th>Policy</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @stock_market_invest_logs.each do |stock_market_invest_log| %>
+  <tr>
+    <td><%= stock_market_invest_log.account_id %></td>
+    <td><%= stock_market_invest_log.operation %></td>
+    <td><%= stock_market_invest_log.profit %></td>
+    <td><%= stock_market_invest_log.policy %></td>
+    <td><%= link_to 'Show', stock_market_invest_log %></td>
+    <td><%= link_to 'Edit', edit_stock_market_invest_log_path(stock_market_invest_log) %></td>
+    <td><%= link_to 'Destroy', stock_market_invest_log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Stock market invest log', new_stock_market_invest_log_path %>

@@ -28,6 +28,7 @@ GEM
     activesupport (3.2.13)
       i18n (= 0.6.1)
       multi_json (~> 1.0)
+    ai4r (1.13)
     arel (3.0.3)
     authlogic (3.1.0)
       activerecord (>= 3.0.7)
@@ -189,6 +190,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ai4r
   authlogic (= 3.1.0)
   capybara (= 2.0.2)
   coffee-rails (~> 3.2.1)

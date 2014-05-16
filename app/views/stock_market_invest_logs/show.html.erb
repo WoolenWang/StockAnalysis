@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Account:</b>
+  <%= @stock_market_invest_log.account_id %>
+</p>
+
+<p>
+  <b>Operation:</b>
+  <%= @stock_market_invest_log.operation %>
+</p>
+
+<p>
+  <b>Profit:</b>
+  <%= @stock_market_invest_log.profit %>
+</p>
+
+<p>
+  <b>Policy:</b>
+  <%= @stock_market_invest_log.policy %>
+</p>
+
+
+<%= link_to 'Edit', edit_stock_market_invest_log_path(@stock_market_invest_log) %> |
+<%= link_to 'Back', stock_market_invest_logs_path %>
