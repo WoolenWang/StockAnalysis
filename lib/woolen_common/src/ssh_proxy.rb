@@ -18,7 +18,10 @@ module WoolenCommon
                 begin
                     Timeout.timeout(@conn_timeout) do
                         @ssh_conn = Net::SSH.start(@host, @user, @options)
-                        return
+                        if check_connector_close
+                            debug 'reconnect ssh ok'
+                            return
+                        end
                     end
                 rescue Exception => e
                     error "连接ssh服务器出错~!信息是:#{e.message}"

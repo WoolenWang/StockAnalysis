@@ -14,6 +14,8 @@ GEM
       rack-cache (~> 1.2)
       rack-test (~> 0.6.1)
       sprockets (~> 2.2.1)
+    actionpool (0.2.3)
+      splib (~> 1.4)
     activemodel (3.2.13)
       activesupport (= 3.2.13)
       builder (~> 3.0.0)
@@ -159,6 +161,7 @@ GEM
       rubyzip
       websocket (~> 1.0.4)
     slop (3.4.7)
+    splib (1.4.3)
     spork (0.9.2)
     sprockets (2.2.2)
       hike (~> 1.2)
@@ -190,6 +193,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actionpool (= 0.2.3)
   ai4r
   authlogic (= 3.1.0)
   capybara (= 2.0.2)

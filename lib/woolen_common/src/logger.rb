@@ -7,7 +7,7 @@ require "#{File.join(File.dirname(__FILE__), 'config_manager')}"
 module WoolenCommon
     class MyLogger # :nodoc: all
         include SystemHelper
-        LEVELS = ["DEBUG", "INFO", "WARN", "ERROR", "FATAL"]
+        LEVELS = %w[ DEBUG INFO WARN ERROR FATAL ]
         COLORS = { 'DEBUG' => 'white', 'INFO' => 'green', 'WARN' => 'yellow', 'ERROR' => 'purple', 'FATAL' => 'red' }
         WIN_PRINTER = Pathname.new(File.join(__FILE__, '..', '..', 'bin', 'puts_color.exe')).realpath.to_s
         attr_reader :file, :stdout, :name
@@ -152,7 +152,7 @@ module WoolenCommon
                 else
                     line = caller[1].gsub(ConfigManager.project_root, '')
                 end
-                _msg = "#{_level},Thread::#{Thread.current},#{Time.now.strftime("%y-%m-%d %H:%M:%S")}\n#{line}: #{msg}"
+                _msg = "#{_level}#{Time.now.strftime("%y-%m-%d %H:%M:%S")}\n#{line}: #{msg}"
                 _msg += "\n" if _msg[-1] != "\n"
                 if $stdouttype== "GBK"
                     _msg = _msg.to_gbk

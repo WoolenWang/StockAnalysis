@@ -20,6 +20,8 @@ case RUBY_VERSION
         gem 'thin', '1.5.1'
         # 人工智能
         gem 'ai4r'
+        # 线程池
+        gem 'actionpool','0.2.3'
 
 
         # Gems used only for assets and not required
