@@ -4,6 +4,8 @@ class UsersController < ApplicationController
 
     before_filter :require_user, :only => [:show, :edit, :update]
 
+    layout 'extjs'
+
     def new
         @user = User.new
     end
@@ -11,19 +13,22 @@ class UsersController < ApplicationController
     def create
         @user = User.find_by_username(params[:user][:username])
         if @user
-            flash[:notice] = "Account registered!"
-            redirect_back_or_default account_url
+            render_fail_msg 'Account already registered!'
         elsif params[:user][:password] != params[:user][:password_confirmation]
-            flash[:notice] = '密码不一致'
+            render_fail_msg '密码不一致'
         else
             params[:user][:encrypted_passwd] = Digest::MD5.hexdigest(params[:user][:password])
             params[:user].delete :password
             params[:user].delete :password_confirmation
             @user = User.new(params[:user])
-            @user.save
-            @current_user = @user
-            flash[:notice] = 'SuccessFully registered!!'
-            render :action => :new
+            debug "#{@user.username},#{@user.encrypted_passwd}"
+            begin
+                @user.save!
+                @current_user = @user
+                render_success_msg 'SuccessFully registered!!'
+            rescue => e
+                render_fail_msg e.message
+            end
         end
     end
 
