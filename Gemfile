@@ -8,6 +8,8 @@ case RUBY_VERSION
         # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
         #gem 'sqlite3','3.7.9'
+        # 国际化
+        gem 'rails-i18n'
 
         # javascript脚本运行
         gem 'jquery-rails', '3.0.4'

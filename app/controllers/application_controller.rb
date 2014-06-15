@@ -1,9 +1,10 @@
 # -*- encoding : utf-8 -*-
 require 'woolen_common/woolen_common'
 class ApplicationController < ActionController::Base
+    before_filter :set_locale
     include WoolenCommon::ToolLogger
     protect_from_forgery
-    helper_method :current_user_session, :current_user, :render_success_json, :render_success_msg, :render_fail_msg
+    helper_method :current_user_session, :current_user, :render_success_json, :render_success_msg, :render_fail_msg, :set_locale
 
     private
     def current_user_session
@@ -75,6 +76,16 @@ class ApplicationController < ActionController::Base
         return_json.merge! extern_hash if extern_hash != {}
         debug "the need to return fail json::#{return_json}"
         render :json => return_json
+    end
+
+    def set_locale
+        logger.debug "* Accept-Language: #{request.env['HTTP_ACCEPT_LANGUAGE']}"
+        I18n.locale = extract_locale_from_accept_language_header
+        logger.debug "* Locale set to '#{I18n.locale}'"
+    end
+
+    def extract_locale_from_accept_language_header
+        request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first
     end
 end
 

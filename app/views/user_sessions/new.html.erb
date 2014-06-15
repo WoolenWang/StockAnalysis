@@ -5,41 +5,46 @@
 		user_register_win.show()
 	}
 </script>
+<% if @user_session.errors.any? %>
+    <%
+        msgs=''
+        @user_session.errors.full_messages.each do |msg|
+            msgs << msg + '  '
+        end
+       all_msg = "#{@user_session.errors.count} #{t(:msg_count)} #{msgs} "
+    %>
+<script type="text/javascript">
+	Ext.onReady(function(){
+		Ext.MessageBox.alert('<%= t(:error_title) %>',"<%= all_msg %>")
+	});
+</script>
+<% end %>
 <div class="login">
-  <div class="menus">
-    <div class="public">
-      <a href="javascript:void(0)" onclick="show_register_user_win()">注册新用户</a><a href="http://t.qq.com/just_woolen" target="_blank">联系开发者</a></div>
-  </div>
-  <div class="box png">
-    <%= form_for @user_session, :url => user_sessions_path do |f| %>
-        <% if @user_session.errors.any? %>
-            <div id="error_explanation">
-              <h2><%= pluralize(@user_session.errors.count, "error") %> 条错误信息:</h2>
-              <ul>
-                <% @user_session.errors.full_messages.each do |msg| %>
-                    <li><%= msg %></li>
-                <% end %>
-              </ul>
+    <div class="menus">
+        <div class="public">
+            <a href="javascript:void(0)" onclick="show_register_user_win()"><%= t :register_user %></a><a href="http://t.qq.com/just_woolen" target="_blank">联系开发者</a>
+        </div>
+    </div>
+    <div class="box png">
+        <%= form_for @user_session, :url => user_sessions_path do |f| %>
+            <div class="header">
+                <h2 class="logo png"><a href="http://t.qq.com/woolen" target="_blank"></a></h2>
+                <span class="alt"><%= t :user_login %></span>
+            </div>
+            <ul>
+                <li><%= f.label t(:username) %> <%= f.text_field :username, :class => 'text' %></li>
+                <li><%= f.label t(:password) %> <%= f.password_field :password, :class => 'text' %></li>
+                <li class="submits"><%= f.submit t(:login), :class => 'submit' %></li>
+            </ul>
+            <div class="copyright">&copy; 1988 - <%= Time.now.year %> |
+                <a href="http://t.qq.com/just_woolen" target="_blank" title="WoolenCMS" style="color: #AAA">Woolen</a> |
+                <a title="沃伦的博客" href="http://t.qq.com/just_woolen" target="_blank" class="weibo tencent">王沃伦的腾讯微博</a>
             </div>
         <% end %>
-        <div class="header">
-          <h2 class="logo png"><a href="http://t.qq.com/woolen" target="_blank"></a></h2>
-          <span class="alt">用户登录</span>
-        </div>
-        <ul>
-          <li><%= f.label :username %><%= f.text_field :username, :class => 'text' %></li>
-          <li><%= f.label :password %><%= f.password_field :password, :class => 'text' %></li>
-          <li class="submits"><%= f.submit "SIGN IN", :class => 'submit' %></li>
-        </ul>
-        <div class="copyright">&copy; 1988 - <%= Time.now.year %> |
-          <a href="http://t.qq.com/just_woolen" target="_blank" title="WoolenCMS" style="color: #AAA" >Woolen</a> |
-          <a title="沃伦的博客" href="http://t.qq.com/just_woolen" target="_blank" class="weibo tencent">王沃伦的腾讯微博</a>
-        </div>
-    <% end %>
-  </div>
-  <div class="air-balloon ab-1 png"></div>
-  <div class="air-balloon ab-2 png"></div>
-  <div class="footer"></div>
+    </div>
+    <div class="air-balloon ab-1 png"></div>
+    <div class="air-balloon ab-2 png"></div>
+    <div class="footer"></div>
 </div>
 <%= javascript_include_tag "fun.base" %>
 <%= javascript_include_tag "login" %>
