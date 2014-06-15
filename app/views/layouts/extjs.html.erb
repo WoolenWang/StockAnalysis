@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>StockAnalysis</title>
+    <link href="/extjs/resources/css/ext-all-neptune.css" rel="stylesheet" type="text/css" />
+    <script src="/extjs/bootstrap.js"></script>
+	<script type="text/javascript">
+		Ext.Loader.setConfig({
+			enabled: true,
+			paths: {
+				MyClass: "/assets/class",
+				MyWin: "/assets/windows"
+			}
+		});
+	</script>
+    <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

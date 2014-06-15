@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>StockAnalysis</title>
+    <%= stylesheet_link_tag "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= stylesheet_link_tag "form", :media => "all" %>
+    <link href="/extjs/resources/css/ext-all-neptune.css" rel="stylesheet" type="text/css"/>
+    <script src="/extjs/bootstrap.js"></script>
+    <script type="text/javascript">
+	    Ext.Loader.setConfig({
+		    enabled: true,
+		    paths: {
+			    MyApp: "/assets/class",
+			    MyWin: "/assets/windows"
+		    }
+	    });
+    </script>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

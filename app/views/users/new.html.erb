@@ -8,10 +8,12 @@
       </ul>
     </div>
 <% end %>
-<%= form_for @user, :url => users_path do |f| %>
+<%= javascript_include_tag 'users' %>
 
-    <%= render :partial => "form", locals: { f: f } %>
+<!--<%= form_for @user, :url => users_path do |f| %>-->
 
-    <%= f.submit "注册" %>
+    <!--<%= render :partial => "form", locals: { f: f } %>-->
 
-<% end %>
+    <!--<%= f.submit "注册" %>-->
+
+<!--<% end %>-->

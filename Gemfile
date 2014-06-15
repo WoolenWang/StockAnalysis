@@ -1,5 +1,4 @@
 source 'http://ruby.taobao.org'
-ruby '1.9.3'
 # 这里使用ruby的版本来区分加载的gem
 case RUBY_VERSION
     when /^1\.9\.3/
@@ -20,6 +19,10 @@ case RUBY_VERSION
         gem 'thin', '1.5.1'
         # 人工智能
         gem 'ai4r'
+        # 线程池
+        gem 'actionpool'
+        # 连接池（资源池）
+        gem 'connection_pool'
 
 
         # Gems used only for assets and not required

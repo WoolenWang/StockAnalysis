@@ -14,6 +14,8 @@ GEM
       rack-cache (~> 1.2)
       rack-test (~> 0.6.1)
       sprockets (~> 2.2.1)
+    actionpool (0.2.3)
+      splib (~> 1.4)
     activemodel (3.2.13)
       activesupport (= 3.2.13)
       builder (~> 3.0.0)
@@ -53,6 +55,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    connection_pool (2.0.0)
     daemons (1.1.9)
     diff-lcs (1.2.5)
     erubis (2.7.0)
@@ -159,6 +162,7 @@ GEM
       rubyzip
       websocket (~> 1.0.4)
     slop (3.4.7)
+    splib (1.4.3)
     spork (0.9.2)
     sprockets (2.2.2)
       hike (~> 1.2)
@@ -190,10 +194,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actionpool
   ai4r
   authlogic (= 3.1.0)
   capybara (= 2.0.2)
   coffee-rails (~> 3.2.1)
+  connection_pool
   execjs (= 1.4.0)
   guard-rspec (= 4.2.0)
   guard-spork (= 1.5.1)
