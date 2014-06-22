@@ -39,7 +39,9 @@ Ext.define 'MyWin.UserRegisterWin',
                     anchor: '90%'
                     validator: ->
                         reg = new RegExp('^[0-9a-zA-Z_]*$')
-                        reg.test(this.getValue());
+                        is_match = reg.test(this.getValue())
+                        return is_match if is_match
+                        return '用户名只能为数字和字母'
                 }
                 {
                     xtype: 'textfield'
@@ -50,9 +52,8 @@ Ext.define 'MyWin.UserRegisterWin',
                     fieldTipAlign: 'right'
                     fieldTip: '需要新建的用户邮箱'
                     anchor: '90%'
-                    validator: ->
-                        reg = new RegExp('^[a-zA-Z0-9_\.]+@[a-zA-Z0-9-]+[\.a-zA-Z]+$')
-                        reg.test(this.getValue());
+                    vtype: 'email'
+                    vtypeText: '邮箱格式不正确'
                 }
                 {
                     xtype: 'textfield'
