@@ -4,13 +4,15 @@ class AddUserDeskTopTestData < ActiveRecord::Migration
       user = User.create(:username => 'admin',:encrypted_passwd => Digest::MD5.hexdigest('admin'),:email => 'admin@woolen.com')
       icons = []
       icons << DesktopIcon.create(:title => '我的账户',:url => '/accounts/show',:win_width => 1100 ,:win_height => 650,
-                                  :identify_name => 'my_account',:icon_path => '/assets/user_home/icon/icon6.png')
+                                  :identify_name => 'my_account',:icon_path => '/assets/user_home/icon/icon1.png')
       3.times do |count|
           icons << DesktopIcon.create(:title => "baidu_#{count}",:url => 'http://www.baidu.com',:win_width => 1100 ,:win_height => 650,
                              :identify_name => "baidu_#{count}",:icon_path => '/assets/user_home/icon/icon6.png')
       end
       icons1 = []
-      9.times do |count|
+      icons1 << DesktopIcon.create(:title => '项目报名',:url => '/sign_up_projects',:win_width => 1100 ,:win_height => 650,
+                                   :identify_name => 'sign_up_projects',:icon_path => '/assets/user_home/icon/icon3.png')
+      3.times do |count|
           icons1 << DesktopIcon.create(:title => "baidu_#{count+10}",:url => 'http://www.baidu.com',:win_width => 1100 ,:win_height => 650,
                                        :identify_name => "baidu_#{count+10}",:icon_path => '/assets/user_home/icon/icon6.png')
       end

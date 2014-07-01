@@ -26,6 +26,12 @@ case RUBY_VERSION
         # 连接池（资源池）
         gem 'connection_pool'
 
+        # 部署服务器
+        #gem 'heroku'
+        # 这里用Heroku Toolbelt 好了:: wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+        #rake
+        gem 'rake','10.3.1'
+
 
         # Gems used only for assets and not required
         # in production environments by default.

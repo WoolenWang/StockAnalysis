@@ -2,6 +2,9 @@
 StockAnalysis::Application.routes.draw do
 
 
+  resources :sign_up_projects
+
+
     get "system_console_show/index"
 
     get "system_console_show/show_policy"
