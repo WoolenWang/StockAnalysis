@@ -1,4 +1,5 @@
 source 'http://ruby.taobao.org'
+ruby '1.9.3'
 # 这里使用ruby的版本来区分加载的gem
 case RUBY_VERSION
     when /^1\.9\.3/
